@@ -1,5 +1,13 @@
-import { BinomialDistribution } from "./binomial.js";
+import { BinomialDistribution } from "./distributions/binomial.js";
+import { NegativeBinomialDistribution } from "./distributions/negative-binomial.js";
 
-let bruh = document.createElement('p');
-bruh.innerText = 'bruh';
-document.appendChild(bruh);
+const DISTRIBUTIONS = [BinomialDistribution, NegativeBinomialDistribution];
+
+let distributionSelector = document.querySelector('#distributionSelector');
+
+for (const DISTRIBUTION of DISTRIBUTIONS) {
+    let distributionOption = document.createElement('option');
+    distributionOption.value = DISTRIBUTION.name;
+    distributionOption.textContent = DISTRIBUTION.name;
+    distributionSelector.appendChild(distributionOption);
+}

@@ -1,14 +1,13 @@
-import { combinations } from "../math.min.js";
 class BinomialDistribution {
-    inputs = ['n', 'p'];
-    name = 'Binomial Distribution'
-    constructor (n, p) {
+    static inputs = ['n', 'p'];
+    static name  = 'Binomial Distribution'
+    constructor(n, p) {
         this.n = n;
         this.p = p;
     }
 
     atPoint = (X) => {
-        const binomialCoeff = combinations(this.n, X);
+        const binomialCoeff = math.combinations(this.n, X);
         const secondTerm = this.p ** X;
         const thirdTerm = (1 - this.p) ** (this.n - X);
         return binomialCoeff * secondTerm * thirdTerm;
@@ -48,4 +47,4 @@ class BinomialDistribution {
     }
 }
 
-export BinomialDistribution;
+export { BinomialDistribution };

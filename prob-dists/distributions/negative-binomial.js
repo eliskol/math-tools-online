@@ -1,6 +1,6 @@
 class NegativeBinomialDistribution {
-    inputs = ['r', 'p'];
-    name = 'Negative Binomial Distribution';
+    static inputs = ['r', 'p'];
+    static name = 'Negative Binomial Distribution';
     constructor (r, p) {
         this.r = r;
         this.p = p;
@@ -47,4 +47,4 @@ class NegativeBinomialDistribution {
     }
 }
 
-export NegativeBinomialDistribution;
+export { NegativeBinomialDistribution };

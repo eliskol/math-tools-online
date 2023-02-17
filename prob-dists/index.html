@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Probability Distributions</title>
-    <link rel="stylesheet" href="./style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Probability Distributions</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="../math.min.js"></script>
+        <script type="module" src="ui.js"></script>
 </head>
 <body>
-    <select>
-        <option value="Negative Binomial">Negative Binomial</option>
-        <option value="Poisson">Poisson</option>
-        <option value="Binomial">Binomial</option>
+    <div id="testDiv"></div>
+    <select id="distributionSelector">
+        <option value=""></option>
     </select>
     <div class="distributionInput">
-        <input type="number" placeholder="r">
-        <input type="number" placeholder="p">
+        <!-- <input type="number" placeholder="r"> -->
+        <!-- <input type="number" placeholder="p"> -->
         <input type="number" placeholder="X">
         <table>
             <tr>
@@ -40,6 +41,5 @@
             </tr>
         </table>
     </div>
-    <script type="module" src="./ui.js"></script>
 </body>
 </html>
