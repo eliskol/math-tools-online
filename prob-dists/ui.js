@@ -35,35 +35,35 @@ class UI {
         let tableRow = document.createElement('tr');
         let dataCell = document.createElement('td');
 
-        dataCell.textContent = `X = ${valueToEvaluateDistributionAt}: ${this.distribution.atPoint(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X = ${valueToEvaluateDistributionAt}): ${this.distribution.atPoint(valueToEvaluateDistributionAt)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `X < ${valueToEvaluateDistributionAt}: ${this.distribution.lessThan(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X < ${valueToEvaluateDistributionAt}): ${this.distribution.lessThan(valueToEvaluateDistributionAt)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `X ≤ ${valueToEvaluateDistributionAt}: ${this.distribution.lessThanOrEqualTo(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X ≤ ${valueToEvaluateDistributionAt}): ${this.distribution.lessThanOrEqualTo(valueToEvaluateDistributionAt)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `X > ${valueToEvaluateDistributionAt}: ${this.distribution.greaterThan(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X > ${valueToEvaluateDistributionAt}): ${this.distribution.greaterThan(valueToEvaluateDistributionAt)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `X ≥ ${valueToEvaluateDistributionAt}: ${this.distribution.greaterThanOrEqualTo(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X ≥ ${valueToEvaluateDistributionAt}): ${this.distribution.greaterThanOrEqualTo(valueToEvaluateDistributionAt)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
     }
