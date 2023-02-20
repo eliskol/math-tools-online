@@ -7,7 +7,7 @@
         <title>Probability Distributions</title>
         <link rel="stylesheet" href="./style.css">
         <script src="../math.min.js"></script>
-        <script type="module" src="ui.js"></script>
+        <script type="module" src="./ui.js"></script>
 </head>
 <body>
     <div id="testDiv"></div>
@@ -15,28 +15,10 @@
         <option value=""></option>
     </select>
     <div id="distributionInputContainer">
+        <div id="distributionParameterContainer"></div>
         <input id="mainDistributionInput" type="number" placeholder="X">
-        <table>
-            <tr>
-                <td>At: </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Less than: </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Less than or equal to: </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Greater than: </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Greater than or equal to: </td>
-                <td></td>
-            </tr>
+        <button id="submit">Submit</button>
+        <table id="distributionValueDisplayTable">
         </table>
     </div>
 </body>

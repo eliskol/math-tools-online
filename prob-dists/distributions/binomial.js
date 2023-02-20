@@ -1,7 +1,7 @@
 class BinomialDistribution {
-    static inputs = ['n', 'p'];
+    static parameters = ['n', 'p'];
     static name  = 'Binomial Distribution'
-    constructor(n, p) {
+    constructor (n, p) {
         this.n = n;
         this.p = p;
     }
@@ -16,7 +16,6 @@ class BinomialDistribution {
     lessThan = (X) => {
         let total = 0;
         for (let x = 0; x < X; x++) {
-            console.log(x);
             total += this.atPoint(x);
         }
         return total;

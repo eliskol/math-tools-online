@@ -1,5 +1,5 @@
 class NegativeBinomialDistribution {
-    static inputs = ['r', 'p'];
+    static parameters = ['r', 'p'];
     static name = 'Negative Binomial Distribution';
     constructor (r, p) {
         this.r = r;
@@ -16,7 +16,6 @@ class NegativeBinomialDistribution {
     lessThan = (X) => {
         let total = 0;
         for (let x = this.r; x < X; x++) {
-            console.log(x);
             total += this.atPoint(x);
         }
         return total;
