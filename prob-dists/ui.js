@@ -73,8 +73,9 @@ class UI {
 
         if (this.distributionParameterContainer.hasChildNodes) this.distributionParameterContainer.innerHTML = '';
 
-        for (const inputName of distributionSelected.parameters) {
-            let parameterInputElement = this.createParameterInputElement(inputName);
+        for (const parameterName in distributionSelected.parameters) {
+            let parameterDescription = distributionSelected.parameters[parameterName];
+            let parameterInputElement = this.createParameterInputElement(parameterName, parameterDescription);
             this.distributionParameterContainer.appendChild(parameterInputElement);
         }
     }
@@ -87,7 +88,7 @@ class UI {
     };
 
 
-    createParameterInputElement = (inputName) => {
+    createParameterInputElement = (parameterName, parameterDescription) => {
         let inputElement = document.createElement('input');
         inputElement.placeholder = inputName;
         inputElement.type = 'number';

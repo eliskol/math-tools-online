@@ -1,5 +1,6 @@
 class NegativeBinomialDistribution {
-    static parameters = ['r', 'p'];
+    static parameters = {'r': 'Number of successful trials', 'p': 'Probability of success for each trial'};
+    static variable = { 'X': 'Number of trials'};
     static name = 'Negative Binomial Distribution';
     constructor (r, p) {
         this.r = r;

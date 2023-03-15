@@ -1,5 +1,6 @@
 class BinomialDistribution {
-    static parameters = ['n', 'p'];
+    static parameters = {'n': 'Number of trials', 'p': 'Probability of success for each trial'};
+    static variable = {'X': 'Number of successful trials'};
     static name  = 'Binomial Distribution'
     constructor (n, p) {
         this.n = n;
