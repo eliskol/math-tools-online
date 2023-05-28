@@ -27,3 +27,11 @@ button {
     background-color: rgb(25, 25, 25);
     height: 35px;
 }
+
+#distributionSelector {
+    margin-bottom: 2%;
+}
+
+#mainDistributionInput {
+    display: none;
+}

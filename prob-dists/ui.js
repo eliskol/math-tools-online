@@ -35,35 +35,35 @@ class UI {
         let tableRow = document.createElement('tr');
         let dataCell = document.createElement('td');
 
-        dataCell.textContent = `P(X = ${valueToEvaluateDistributionAt}): ${this.distribution.atPoint(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X = ${valueToEvaluateDistributionAt}): ${this.distribution.atPoint(valueToEvaluateDistributionAt).toFixed(3)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `P(X < ${valueToEvaluateDistributionAt}): ${this.distribution.lessThan(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X < ${valueToEvaluateDistributionAt}): ${this.distribution.lessThan(valueToEvaluateDistributionAt).toFixed(3)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `P(X ≤ ${valueToEvaluateDistributionAt}): ${this.distribution.lessThanOrEqualTo(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X ≤ ${valueToEvaluateDistributionAt}): ${this.distribution.lessThanOrEqualTo(valueToEvaluateDistributionAt).toFixed(3)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `P(X > ${valueToEvaluateDistributionAt}): ${this.distribution.greaterThan(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X > ${valueToEvaluateDistributionAt}): ${this.distribution.greaterThan(valueToEvaluateDistributionAt).toFixed(3)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
 
         tableRow = document.createElement('tr');
         dataCell = document.createElement('td');
 
-        dataCell.textContent = `P(X ≥ ${valueToEvaluateDistributionAt}): ${this.distribution.greaterThanOrEqualTo(valueToEvaluateDistributionAt)}`;
+        dataCell.textContent = `P(X ≥ ${valueToEvaluateDistributionAt}): ${this.distribution.greaterThanOrEqualTo(valueToEvaluateDistributionAt).toFixed(3)}`;
         tableRow.appendChild(dataCell);
         this.distributionValueDisplayTable.appendChild(tableRow);
     }
@@ -90,7 +90,7 @@ class UI {
 
     createParameterInputElement = (parameterName, parameterDescription) => {
         let inputElement = document.createElement('input');
-        inputElement.placeholder = inputName;
+        inputElement.placeholder = parameterName;
         inputElement.type = 'number';
         inputElement.className = 'distributionParameterInput';
         inputElement.addEventListener('input', () => {
@@ -107,6 +107,7 @@ class UI {
             return;
         }
         this.createDistribution(distributionParameterInputArray);
+        this.mainDistributionInput.style.display = "initial";
     }
 
     createDistribution = (distributionParameterInputArray) => {
